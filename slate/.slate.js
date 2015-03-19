@@ -1,4 +1,4 @@
- n// Basic mappings and bindings for moving screens around
+// Basic mappings and bindings for moving screens around
 
 // Global configs: https://github.com/jigish/slate/wiki/Global-Configs
 // Layouts doc: https://github.com/jigish/slate/wiki/Layouts
