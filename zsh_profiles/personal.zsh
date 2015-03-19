@@ -12,6 +12,7 @@ alias gd='git diff'
 alias gs='git status'
 alias notes="\$EDITOR ~/Dropbox/notes"
 alias pb='pianobar'
+alias projects='cd ~/Dropbox/dev/projects'
 alias pz="\$EDITOR \$HOME/Dropbox/dev/config/zsh_profiles/personal.zsh"
 alias server='open http://localhost:8000 && python -m SimpleHTTPServer'
 alias tmp='cd ~/tmp'
