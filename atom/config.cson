@@ -1,0 +1,40 @@
+"*":
+  editor:
+    invisibles: {}
+    showIndentGuide: true
+    showInvisibles: true
+    fontSize: 14
+  core:
+    disabledPackages: [
+      "linter-ruby"
+      "autocomplete"
+      "vim-mode"
+      "minimap"
+      "tab-move-key"
+      "atom-lint"
+      "linter-erb"
+      "linter-clang"
+      "linter-javac"
+    ]
+  "exception-reporting":
+    userId: "3ac7bdaa-13cd-908f-74b4-4c822bcc41a1"
+  welcome:
+    showOnStartup: false
+  "linter-shellcheck":
+    shellcheckExecutablePath: "/Users/thooper/Library/Haskell/bin/shellcheck"
+  linter: {}
+  "autocomplete-plus": {}
+  "atom-lint": {}
+  minimap: {}
+  "highlight-line":
+    enableBackgroundColor: false
+    hideHighlightOnSelect: true
+    enableUnderline: true
+  "markdown-preview":
+    breakOnSingleNewline: true
+  "linter-jshint":
+    jshintExecutablePath: "/usr/local/bin/jshint"
+  "linter-rubocop":
+    rubocopExecutablePath: "/Users/thooper/.rbenv/shims/rubocop"
+  "linter-less":
+    lessExecutablePath: "/usr/bin/less"

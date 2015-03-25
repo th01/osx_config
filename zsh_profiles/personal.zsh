@@ -4,7 +4,8 @@
 
 alias be='bundle exec'
 alias cdz='cd $HOME/Dropbox/dev/config/zsh_profiles'
-alias dev='cd ~/dev'
+alias config='cd ~/Dropbox/dev/config'
+alias dev='cd ~/Dropbox/dev/projects'
 alias dropbox='cd ~/Dropbox'
 alias g='git'
 alias gco='git checkout'

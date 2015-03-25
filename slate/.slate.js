@@ -56,33 +56,40 @@ var rightHalf = S.operation("move", {
 
 // LAYOUTS
 var externalMonitorLayout = slate.layout("externalMonitor", {
-  "Google Chrome": {
+  "iTerm": {
     "operations": [function(windowObject) {
-      var title = windowObject.title();
-
-      if (title !== undefined && title.match(/devtools/)) {
-        windowObject.doOperation(fullscreenExternal);
-      } else {
-        windowObject.doOperation(fullscreen);
-      }
+      windowObject.doOperation(fullscreen);
     }],
     "ignore-fail": true,
     "repeat"     : true
   },
-  "iTerm": {
-    "operations": [fullscreen],
-    "sort-title": true,
-    "repeat"    : true
-  }
+  "Google Chrome": {
+    "operations": [function(windowObject) {
+      windowObject.doOperation(fullscreen);
+    }],
+    "ignore-fail": true,
+    "repeat"     : true
+  },
+  "Atom": {
+    "operations": [function(windowObject) {
+      windowObject.doOperation(fullscreen);
+    }],
+    "ignore-fail": true,
+    "repeat"     : true
+  },
+  "Sequel Pro": {
+    "operations": [function(windowObject) {
+      windowObject.doOperation(fullscreen);
+    }],
+    "ignore-fail": true,
+    "repeat"     : true
+  },
 });
 
 
-// BINDS
-S.bindAll({
-  "l:ctrl;alt;cmd"    : slate.operation("layout", { "name" : externalMonitorLayout }),
-  "m:ctrl;alt;cmd"    : fullscreen
+slate.eachApp(function(appObject) {
+  slate.log(appObject.name() );
 });
-
 
 // DEFAULTS
 // default the layout so it activates when I plug in an external monitor.
