@@ -3,25 +3,25 @@
     invisibles: {}
     showIndentGuide: true
     showInvisibles: true
-    fontSize: 14
+    fontSize: 11
   core:
     disabledPackages: [
       "linter-ruby"
       "autocomplete"
-      "vim-mode"
       "minimap"
       "tab-move-key"
       "atom-lint"
       "linter-erb"
       "linter-clang"
       "linter-javac"
+      "vim-mode"
     ]
   "exception-reporting":
     userId: "3ac7bdaa-13cd-908f-74b4-4c822bcc41a1"
   welcome:
     showOnStartup: false
   "linter-shellcheck":
-    shellcheckExecutablePath: "/Users/thooper/Library/Haskell/bin/shellcheck"
+    shellcheckExecutablePath: "/usr/local/bin/shellcheck"
   linter: {}
   "autocomplete-plus": {}
   "atom-lint": {}
@@ -35,6 +35,11 @@
   "linter-jshint":
     jshintExecutablePath: "/usr/local/bin/jshint"
   "linter-rubocop":
-    rubocopExecutablePath: "/Users/thooper/.rbenv/shims/rubocop"
+    rubocopExecutablePath: "/usr/local/bin/rubocop"
   "linter-less":
     lessExecutablePath: "/usr/bin/less"
+  term2:
+    colors: {}
+    cursorBlink: false
+  "linter-js-yaml": {}
+  "web-browser": {}

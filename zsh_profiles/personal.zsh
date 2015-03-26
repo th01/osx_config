@@ -2,6 +2,7 @@
 
 # source $HOME/Dropbox/dev/zsh_profiles/personal.zsh
 
+alias akeys="\$EDITOR ~/.atom/keymap.cson"
 alias be='bundle exec'
 alias cdz='cd $HOME/Dropbox/dev/config/zsh_profiles'
 alias config='cd ~/Dropbox/dev/config'
@@ -20,8 +21,9 @@ alias tmp='cd ~/tmp'
 alias z="\$EDITOR ~/.zshrc"
 
 export EDITOR='atom'
-
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+source "$HOME/Dropbox/dev/config/zsh_profiles/bindkey.zsh"
 
 eval "$(rbenv init -)"
 
