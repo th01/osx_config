@@ -24,10 +24,12 @@
 # If you are unfamiliar with CSON, you can read more about it here:
 # https://github.com/bevry/cson#what-is-cson
 
-'.workspace':
+'.term, .editor, .workspace':
   'ctrl-alt-left': 'window:focus-pane-on-left'
   'ctrl-alt-right': 'window:focus-pane-on-right'
   'ctrl-alt-up': 'window:focus-pane-above'
   'ctrl-alt-down': 'window:focus-pane-below'
   'ctrl-alt-cmd-left': 'pane:move-item-left'
   'ctrl-alt-cmd-right': 'pane:move-item-right'
+  'alt-cmd-left': 'pane:show-previous-item'
+  'alt-cmd-right': 'pane:show-next-item'
