@@ -2,9 +2,10 @@
   editor:
     invisibles: {}
     showIndentGuide: true
-    showInvisibles: true
+    fontSize: 11
     preferredLineLength: 100
-    fontSize: 14
+    softTabs: false
+    showInvisibles: true
   core:
     disabledPackages: [
       "autocomplete"
@@ -12,7 +13,6 @@
       "tab-move-key"
       "atom-lint"
       "vim-mode"
-      "linter-rubocop"
     ]
   "exception-reporting":
     userId: "3ac7bdaa-13cd-908f-74b4-4c822bcc41a1"
@@ -26,11 +26,9 @@
   "atom-lint": {}
   minimap: {}
   "highlight-line":
-    hideHighlightOnSelect: true
-    underlineColor: "00FF00"
-    enableUnderline: true
     enableBackgroundColor: false
-    underline: "dashed"
+    hideHighlightOnSelect: true
+    enableUnderline: true
   "markdown-preview":
     breakOnSingleNewline: true
   "linter-jshint":
@@ -42,19 +40,13 @@
     cursorBlink: false
   "linter-js-yaml": {}
   "web-browser": {}
-  "tabs-to-spaces":
-    onSave: "untabify"
-  "bracket-matcher":
-    autocompleteBrackets: false
-    autocompleteSmartQuotes: false
-  "spell-check": {}
 ".erb.html.text":
-  editor:
-    preferredLineLength: 100
-".ruby.source":
   editor:
     preferredLineLength: 100
 ".css.source":
   editor:
     preferredLineLength: 100
     tabLength: 2
+".ruby.source":
+  editor:
+    preferredLineLength: 100

@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+require 'gibberish'
+
+cipher = Gibberish::AES.new(ENV.fetch('PBK'))
+username = cipher.decrypt("{\"v\":1,\"adata\":\"\",\"ks\":256,\"ct\":\"sQy86/3e1q6B/IaOQwXRBbSdDyPCbds7uPs6+Ffz8Q==\",\"ts\":96,\"mode\":\"gcm\",\"cipher\":\"aes\",\"iter\":100000,\"iv\":\"Z6lQl1S8JItRJ4zt\",\"salt\":\"Lukb6w7cV4I=\"}")
+password = cipher.decrypt("{\"v\":1,\"adata\":\"\",\"ks\":256,\"ct\":\"3KR59lDS/tmcwEEM6JTPQQ5RzJp06Rqk\",\"ts\":96,\"mode\":\"gcm\",\"cipher\":\"aes\",\"iter\":100000,\"iv\":\"WhpYEOg9ubv0LOHm\",\"salt\":\"Gqy5cTclFYg=\"}")
+config_path = "/Users/thooper/Dropbox/dev/config/pianobar/config"
+
+
+File.open(config_path, 'w+') do |f|
+  f << "user = #{username}\n"
+  f << "password = #{password}"
+end

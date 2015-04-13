@@ -1,0 +1,4 @@
+user = your@user.name
+password = password
+# or
+#password_command = gpg --decrypt ~/password

@@ -13,7 +13,6 @@ alias gco='git checkout'
 alias gd='git diff'
 alias gs='git status'
 alias notes="\$EDITOR ~/Dropbox/notes"
-alias pb='pianobar && pianokeys'
 alias projects='cd ~/Dropbox/dev/projects'
 alias pz="\$EDITOR \$HOME/Dropbox/dev/config/zsh_profiles/personal.zsh"
 alias server='open http://localhost:8000 && python -m SimpleHTTPServer'
@@ -23,9 +22,12 @@ alias z="\$EDITOR ~/.zshrc"
 export EDITOR='atom'
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
+eval "$(rbenv init -)"
+
 source "$HOME/Dropbox/dev/config/zsh_profiles/bindkey.zsh"
 
-eval "$(rbenv init -)"
+setopt HIST_IGNORE_SPACE
+
 
 function cd() {
     new_directory="$*";
@@ -67,6 +69,20 @@ function src() {
   source ~/.zshrc
 }
 
+function pb() {
+  ~/.config/pianobar/make_config
+  pianobar && pianokeys
+  rm ~/.config/pianobar/config
+}
+
 function text() {
   curl http://textbelt.com/text -d number="${1}" -d message="${2}"
+}
+
+function jumbalya() {
+  curl --data "password=${1}&jText=${2}" https://jumbalya.herokuapp.com/jumbalya
+}
+
+function unjumbalya() {
+  curl --data "password=${1}&jText=${2}" https://jumbalya.herokuapp.com/unjumbalya
 }
