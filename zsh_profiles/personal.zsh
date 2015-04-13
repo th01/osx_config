@@ -70,9 +70,14 @@ function src() {
 }
 
 function pb() {
+  function rm_config() {
+    sleep 1
+    rm ~/.config/pianobar/config
+  }
   ~/.config/pianobar/make_config
+  ( rm_config & ) > /dev/null 2>&1
   pianobar && pianokeys
-  rm ~/.config/pianobar/config
+  wait
 }
 
 function text() {
